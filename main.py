@@ -11,4 +11,4 @@ first_name = "mookie"
 last_name = "betts"
 
 main_stats = StatsRange(first_name, last_name, stats_file)
-main_stats.parse_array()
+main_stats.driver()
