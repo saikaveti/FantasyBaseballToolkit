@@ -37,7 +37,7 @@ class StatsRange:
                     array = line.split()
                     self.playerid = int(array[1])
 
-            print(self.playerid)
+            #print(self.playerid)
 
     def create_player(self):
         lines = [line.rstrip('\n') for line in open(self.output_file)]
@@ -120,7 +120,7 @@ class StatsRange:
         date_obj = DateManipulation()
 
         prev_date = date_obj.get_date_for_num_days(num_days)
-        last_date = date_obj.get_date_for_num_days(num_days)
+        last_date = date_obj.get_date_for_num_days(2)
 
         #print(prev_date)
 
@@ -149,26 +149,32 @@ class StatsRange:
 
 
     def last_week(self):
-        print("FINDING LAST WEEKS'S DATA:")
+        print("\nFINDING LAST WEEKS'S DATA:")
 
         data = self.write_file_for_range(7)
+
+        player = self.create_player()
+
+        player.print_player()
 
         return data
 
     def last_30_days(self):
-        print("FINDING LAST MONTH'S DATA:")
+        print("\nFINDING LAST MONTH'S DATA:")
 
         data = self.write_file_for_range(30)
 
-        return data
+        player = self.create_player()
+
+        player.print_player()
 
     def ytd(self):
-        print("FINDING YEAR TO DATE'S DATA:")
+        print("\nFINDING YEAR TO DATE'S DATA:")
 
         date_obj = DateManipulation()
 
         prev_date = '2018-03-29'
-        last_date = date_obj.get_previous_date()
+        last_date = date_obj.get_date_for_num_days(2)
 
         #print(prev_date)
 
@@ -182,11 +188,15 @@ class StatsRange:
 
         file.close()
 
+        player = self.create_player()
+
+        player.print_player()
+
         return data
 
     def driver(self):
         self.parse_array()
         self.yesterday()
-        ###self.last_week()
-        ###self.last_30_days()
-        ###self.ytd()
+        self.last_week()
+        self.last_30_days()
+        self.ytd()

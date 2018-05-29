@@ -1,3 +1,4 @@
+from tabulate import tabulate
 class Player:
     def __init__(self, first_name, last_name, AB, R, H, HR, RBI, SO, SB, BA, OBP, SLG, OPS):
         self.first_name = first_name
@@ -15,4 +16,5 @@ class Player:
         self.SLG = SLG
 
     def print_player(self):
-        print(self.first_name + " " + self.last_name + ": " + str(self.AB)  + ", " + str(self.R)  + ", " + str(self.H)  + ", " + str(self.HR) + ", " + str(self.RBI) + ", " + str(self.SO) + ", " + str(self.SB) + ", " + str(self.BA) + ", " + str(self.OBP) + ", " + str(self.SLG) + ", " + str(self.OPS))
+        #print(self.first_name + " " + self.last_name + ": " + str(self.AB)  + ", " + str(self.R)  + ", " + str(self.H)  + ", " + str(self.HR) + ", " + str(self.RBI) + ", " + str(self.SO) + ", " + str(self.SB) + ", " + str(self.BA) + ", " + str(self.OBP) + ", " + str(self.SLG) + ", " + str(self.OPS))
+        print(tabulate([[self.first_name, self.last_name, self.AB, self.R, self.H, self.HR, self.RBI, self.SO, self.SB, self.BA, self.OBP, self.SLG, self.OPS]], headers = ["First Name", "Last Name" , "AB", "R", "H", "HR", "RBI", "SO", "SB", "BA", "OBP", "SLG", "OPS"]))

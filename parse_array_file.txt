@@ -1,9 +1,9 @@
-(0, name_last            moreland
-name_first              mitch
-key_mlbam              519048
-key_retro            morem001
-key_bbref           morelmi01
-key_fangraphs            3086
-mlb_played_first         2010
-mlb_played_last          2018
+(0, name_last           goldschmidt
+name_first                 paul
+key_mlbam                502671
+key_retro              goldp001
+key_bbref             goldspa01
+key_fangraphs              9218
+mlb_played_first           2011
+mlb_played_last            2018
 Name: 0, dtype: object)
