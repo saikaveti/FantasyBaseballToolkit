@@ -1,6 +1,9 @@
 from pybaseball import playerid_lookup
 from pybaseball import batting_stats_range
+from Player import *
 from DateManipulation import *
+
+import re
 
 class StatsRange:
 
@@ -37,13 +40,14 @@ class StatsRange:
             print(self.playerid)
 
     def create_player(self):
-        lines = [line.rstrip('\n') for line in open(self.input_data_file)]
+        lines = [line.rstrip('\n') for line in open(self.output_file)]
 
-        list = []
+        full_name = self.first_name + " " + self.last_name
+
+        player_found = False
 
         first_name = ""
         last_name = ""
-        PA = 0
         AB = 0
         R = 0
         H = 0
@@ -51,16 +55,72 @@ class StatsRange:
         RBI = 0
         SO = 0
         SB = 0
-        BA = 0
-        OPB = 0
-        OPS = 0
-        SLG = 0 
+        BA = 0.0
+        OBP = 0.0
+        OPS = 0.0
+        SLG = 0.0
+
+        #print(len(lines))
+
+        for line in lines:
+            if (line.startswith("Name") and not line.startswith("Name:")):
+                #print(line)
+                elements = re.split(r'\s{2,}', line)
+                if full_name.lower() == elements[1].lower():
+                    #print(full_name)
+                    full_name = elements[1]
+
+                    name_elements = full_name.split()
+                    first_name = name_elements[0]
+                    last_name = name_elements[1]
+
+                    player_found = True
+
+            if (player_found):
+                if line.startswith("AB"):
+                    elements = line.split()
+                    AB = int(elements[1])
+                elif line.startswith("R") and not line.startswith("RBI"):
+                    elements = line.split()
+                    R = int(elements[1])
+                elif line.startswith("H") and not line.startswith("HR") and not line.startswith("HBP"):
+                    elements = line.split()
+                    H = int(elements[1])
+                elif line.startswith("HR"):
+                    elements = line.split()
+                    HR = int(elements[1])
+                elif line.startswith("RBI"):
+                    elements = line.split()
+                    RBI = int(elements[1])
+                elif line.startswith("SO"):
+                    elements = line.split()
+                    SO = int(elements[1])
+                elif line.startswith("SB"):
+                    elements = line.split()
+                    SB = int(elements[1])
+                elif line.startswith("BA"):
+                    elements = line.split()
+                    BA = float(elements[1])
+                elif line.startswith("OBP"):
+                    elements = line.split()
+                    OBP = float(elements[1])
+                    #print("FIND LINE")
+                elif line.startswith("SLG"):
+                    elements = line.split()
+                    SLG = float(elements[1])
+                elif line.startswith("OPS"):
+                    elements = line.split()
+                    OPS = float(elements[1])
+                elif line.startswith("Name:"):
+                    player_found = False
+
+        return Player(first_name, last_name, AB, R, H, HR, RBI, SO, SB, BA, OBP, SLG, OPS)
 
     def write_file_for_range(self, num_days):
         date_obj = DateManipulation()
 
         prev_date = date_obj.get_date_for_num_days(num_days)
-        last_date = date_obj.get_previous_date()
+        last_date = date_obj.get_date_for_num_days(num_days)
 
         #print(prev_date)
 
@@ -79,7 +139,11 @@ class StatsRange:
     def yesterday(self):
         print("FINDING YESTERDAY'S DATA:")
 
-        data = self.write_file_for_range(1)
+        data = self.write_file_for_range(2)
+
+        player = self.create_player()
+
+        player.print_player()
 
         return data
 
@@ -94,7 +158,7 @@ class StatsRange:
     def last_30_days(self):
         print("FINDING LAST MONTH'S DATA:")
 
-        data = self.write_file_for_range(1)
+        data = self.write_file_for_range(30)
 
         return data
 
@@ -120,10 +184,9 @@ class StatsRange:
 
         return data
 
-
     def driver(self):
         self.parse_array()
         self.yesterday()
-        self.last_week()
-        self.last_30_days()
-        self.ytd()
+        ###self.last_week()
+        ###self.last_30_days()
+        ###self.ytd()
