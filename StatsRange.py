@@ -1,5 +1,6 @@
-from pybaseball import statcast_batter
 from pybaseball import playerid_lookup
+from pybaseball import batting_stats_range
+from DateManipulation import *
 
 class StatsRange:
 
@@ -26,31 +27,83 @@ class StatsRange:
             with open('parse_array_file.txt') as f:
                 lines = f.readlines()
 
-            ### print(len(lines))
+            #print(len(lines))
 
             for line in lines:
                 if (line.startswith("key_mlbam")):
                     array = line.split()
                     self.playerid = int(array[1])
 
-            ### print(self.playerid)
+            print(self.playerid)
+
+    def write_file_for_range(self, num_days):
+        date_obj = DateManipulation()
+
+        prev_date = date_obj.get_date_for_num_days(num_days)
+        last_date = date_obj.get_previous_date()
+
+        #print(prev_date)
+
+        file = open(self.output_file, 'w')
+
+        data = batting_stats_range(prev_date, last_date)
+
+        for i, row in data.iterrows():
+            file.write(str(row))
+            file.write("\n")
+
+        file.close()
+
+        return data
 
     def yesterday(self):
         print("FINDING YESTERDAY'S DATA:")
 
-    def yesterday(self):
+        data = self.write_file_for_range(1)
+
+        return data
+
+
+    def last_week(self):
         print("FINDING LAST WEEKS'S DATA:")
 
-    def yesterday(self):
+        data = self.write_file_for_range(7)
+
+        return data
+
+    def last_30_days(self):
         print("FINDING LAST MONTH'S DATA:")
 
-    def yesterday(self):
+        data = self.write_file_for_range(1)
+
+        return data
+
+    def ytd(self):
         print("FINDING YEAR TO DATE'S DATA:")
+
+        date_obj = DateManipulation()
+
+        prev_date = '2018-03-29'
+        last_date = date_obj.get_previous_date()
+
+        #print(prev_date)
+
+        file = open(self.output_file, 'w')
+
+        data = batting_stats_range(prev_date, last_date)
+
+        for i, row in data.iterrows():
+            file.write(str(row))
+            file.write("\n")
+
+        file.close()
+
+        return data
 
 
     def driver(self):
         self.parse_array()
         self.yesterday()
         self.last_week()
-        self.last_month()
+        self.last_30_days()
         self.ytd()

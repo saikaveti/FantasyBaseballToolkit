@@ -1,9 +1,9 @@
-(0, name_last               betts
-name_first             mookie
-key_mlbam              605141
-key_retro            bettm001
-key_bbref           bettsmo01
-key_fangraphs           13611
-mlb_played_first         2014
+(0, name_last            moreland
+name_first              mitch
+key_mlbam              519048
+key_retro            morem001
+key_bbref           morelmi01
+key_fangraphs            3086
+mlb_played_first         2010
 mlb_played_last          2018
 Name: 0, dtype: object)
