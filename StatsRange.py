@@ -36,6 +36,26 @@ class StatsRange:
 
             print(self.playerid)
 
+    def create_player(self):
+        lines = [line.rstrip('\n') for line in open(self.input_data_file)]
+
+        list = []
+
+        first_name = ""
+        last_name = ""
+        PA = 0
+        AB = 0
+        R = 0
+        H = 0
+        HR = 0
+        RBI = 0
+        SO = 0
+        SB = 0
+        BA = 0
+        OPB = 0
+        OPS = 0
+        SLG = 0 
+
     def write_file_for_range(self, num_days):
         date_obj = DateManipulation()
 

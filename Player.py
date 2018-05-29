@@ -1,20 +1,17 @@
 class Player:
-    def __init__(self, inupt_data_file):
-        self.first_name = ""
-        self.last_name = ""
-        self.input_data_file = input_data_file
-        self.PA = 0
-        self.AB = 0
-        self.R = 0
-        self.H = 0
-        self.HR = 0
-        self.RBI = 0
-        self.SO = 0
-        self.SB = 0
-        self.BA = 0
-        self.OPB = 0
-        self.OPS = 0
-        self.SLG = 0
-
-    def create_player(self):
+    def __init__(self, first_name, last_name, PA, AB, R, H, HR, RBI, SO, SB, BA, OPB, OPS, SLG):
+        self.first_name = first_name
+        self.last_name = last_name
+        self.PA = PA
+        self.AB = AB
+        self.R = R
+        self.H = H
+        self.HR = HR
+        self.RBI = RBI
+        self.SO = SO
+        self.SB = SB
+        self.BA = BA
+        self.OPB = OPB
+        self.OPS = OPS
+        self.SLG = SLG
         
