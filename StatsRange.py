@@ -139,7 +139,7 @@ class StatsRange:
     def yesterday(self):
         print("FINDING YESTERDAY'S DATA:")
 
-        data = self.write_file_for_range(2)
+        data = self.write_file_for_range(1)
 
         player = self.create_player()
 
