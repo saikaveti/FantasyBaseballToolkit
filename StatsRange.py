@@ -120,7 +120,7 @@ class StatsRange:
         date_obj = DateManipulation()
 
         prev_date = date_obj.get_date_for_num_days(num_days)
-        last_date = date_obj.get_date_for_num_days(2)
+        last_date = date_obj.get_date_for_num_days(1)
 
         #print(prev_date)
 

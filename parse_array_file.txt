@@ -1,9 +1,0 @@
-(0, name_last           goldschmidt
-name_first                 paul
-key_mlbam                502671
-key_retro              goldp001
-key_bbref             goldspa01
-key_fangraphs              9218
-mlb_played_first           2011
-mlb_played_last            2018
-Name: 0, dtype: object)
