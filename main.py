@@ -8,8 +8,8 @@ stats_file = "stats_file.txt"
 ###first_name = raw_input("First Name: ")
 ###last_name = raw_input("Last Name: ")
 
-first_name = "paul"
-last_name = "goldschmidt"
+first_name = "jed"
+last_name = "lowrie"
 
 main_stats = StatsRange(first_name, last_name, stats_file)
 main_stats.driver()
