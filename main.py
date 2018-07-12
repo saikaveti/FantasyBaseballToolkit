@@ -1,5 +1,6 @@
 from StatsRange import *
 from PlayerComparison import *
+from SimilarPlayerSearch import *
 
 stats_file = "stats_file.txt"
 
@@ -12,7 +13,10 @@ first_name = "jed"
 last_name = "lowrie"
 
 main_stats = StatsRange(first_name, last_name, stats_file)
-main_stats.driver()
+###ain_stats.driver()
 
-compare_stats = PlayerComparison(["j.d.", "rafael"], ["martinez", "devers"], 0, stats_file, "2018-04-16", "2018-04-18")
-compare_stats.tabulate_players()
+compare_stats = PlayerComparison(["j.d.", "rafael"], ["martinez", "devers"], 14, stats_file, "", "")
+###compare_stats.tabulate_players()
+
+similarPlayers = SimilarPlayerSearch("jed", "lowrie", 14, stats_file)
+similarPlayers.find_similar_players()
