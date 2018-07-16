@@ -6,19 +6,21 @@ import sys
 
 stats_file = "stats_file.txt"
 
+type_analysis = "range"
+
 ### TO REDUCE TYPING WHILE TESTING
 
 ###first_name = raw_input("First Name: ")
 ###last_name = raw_input("Last Name: ")
 
-first_name = "mike"
-last_name = "trout"
+if type_analysis == "range":
+    main_stats = StatsRange("mike", "trout", stats_file)
+    main_stats.driver()
 
-main_stats = StatsRange(first_name, last_name, stats_file)
-#main_stats.driver()
+if type_analysis == "comparison":
+    compare_stats = PlayerComparison(["j.d.", "mike"], ["martinez", "trout"], 14, stats_file, "", "")
+    compare_stats.tabulate_players(True)
 
-compare_stats = PlayerComparison(["j.d.", "mike"], ["martinez", "trout"], 14, stats_file, "", "")
-#compare_stats.tabulate_players(True)
-
-similarPlayers = SimilarPlayerSearch("mike", "trout", 14, stats_file)
-similarPlayers.find_similar_players(7)
+if type_analysis == "similar":
+    similarPlayers = SimilarPlayerSearch("mike", "trout", 14, stats_file)
+    similarPlayers.find_similar_players(7)
