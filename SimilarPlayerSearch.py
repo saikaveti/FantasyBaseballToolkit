@@ -197,6 +197,8 @@ class SimilarPlayerSearch:
             first_name_list.append(player.first_name)
             last_name_list.append(player.last_name)
 
+        print("Finding players similar to " + self.first_name.upper() + " " + self.last_name.upper() + " over the past " + str(self.num_days) + " days.")
+
         comparison = PlayerComparison(first_name_list, last_name_list, self.num_days, self.output_file, "", "")
         comparison.list_players = similar_player_list
 

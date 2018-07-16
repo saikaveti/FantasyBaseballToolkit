@@ -6,7 +6,7 @@ import sys
 
 stats_file = "stats_file.txt"
 
-type_analysis = "range"
+type_analysis = "similar"
 
 ### TO REDUCE TYPING WHILE TESTING
 
