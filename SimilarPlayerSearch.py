@@ -3,6 +3,7 @@ from tabulate import tabulate
 from Player import *
 from StatsRange import *
 from DateManipulation import *
+from PlayerComparison import *
 
 class SimilarPlayerSearch:
 
@@ -28,9 +29,9 @@ class SimilarPlayerSearch:
             file.write(str(row))
             file.write("\n")
 
-            file.close()
+        file.close()
 
-            return data
+        return data
 
     def create_player_list(self):
         lines = [line.rstrip('\n') for line in open(self.output_file)]
@@ -97,16 +98,103 @@ class SimilarPlayerSearch:
 
         return list_players
 
-    def find_similar_players(self):
+    def isSimilarTo(self, main_player, player, min_similarities):
+        count = 0
+
+        minRun = main_player.R * .85
+        maxRun = main_player.R * 1.15
+
+        if (player.R > minRun and player.R < maxRun):
+            count += 1
+
+        minHits = main_player.H * .8
+        maxHits = main_player.H * 1.2
+
+        if (player.H > minHits and player.H < maxHits):
+            count += 1
+
+        minHR = main_player.HR * .7
+        maxHR = main_player.HR * 1.3
+
+        if (player.HR > minHR and player.HR < maxHR):
+            count += 1
+
+        minRBI = main_player.RBI * .75
+        maxRBI = main_player.RBI * 1.25
+
+        if (player.RBI > minRBI and player.RBI < maxRBI):
+            count += 1
+
+        minSO = main_player.SO * .6
+        maxSO = main_player.SO * 1.4
+
+        if (player.SO > minSO and player.SO < maxSO):
+            count += 1
+
+        minSB = main_player.SB * .9
+        maxSB = main_player.SB * 1.1
+
+        if (player.SB > minSB and player.SB < maxSB):
+            count += 1
+
+        minBA = main_player.BA - .050
+        maxBA = main_player.BA + .050
+
+        if (player.BA > minBA and player.BA < maxBA):
+            count += 1
+
+        minOBP = main_player.OBP - .050
+        maxOBP = main_player.OBP + .050
+
+        if (player.OBP > minOBP and player.OBP < maxOBP):
+            count += 1
+
+        minSLG = main_player.SLG - .075
+        maxSLG = main_player.SLG + .075
+
+        if (player.SLG > minSLG and player.SLG < maxSLG):
+            count += 1
+
+        minOPS = main_player.OPS - .125
+        maxOPS = main_player.OPS + .125
+
+        if (player.OPS > minOPS and player.OPS < maxOPS):
+            count += 1
+
+        if (count < min_similarities):
+            return False
+        else:
+            return True
+
+    def find_similar_players(self, min_similarities):
+        self.write_file_for_range()
+
         list = self.create_player_list()
 
         main_player = Player("", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
 
         for player in list:
-            if (player.first_name.lower() == self.first_name && player.last_name.lower() == self.last_name):
+            if (player.first_name.lower() == self.first_name and player.last_name.lower() == self.last_name):
                 main_player = player
                 break
 
-        similar_player_list = list()
+        similar_player_list = []
+
+        similar_player_list.append(main_player)
 
         for player in list:
+            if (self.isSimilarTo(main_player, player, min_similarities)):
+                if (main_player.first_name.lower() != player.first_name.lower() and main_player.last_name.lower() != player.last_name.lower()):
+                    similar_player_list.append(player)
+
+        first_name_list = []
+        last_name_list = []
+
+        for player in similar_player_list:
+            first_name_list.append(player.first_name)
+            last_name_list.append(player.last_name)
+
+        comparison = PlayerComparison(first_name_list, last_name_list, self.num_days, self.output_file, "", "")
+        comparison.list_players = similar_player_list
+
+        comparison.tabulate_players(False)

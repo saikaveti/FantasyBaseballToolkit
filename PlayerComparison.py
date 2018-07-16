@@ -12,6 +12,7 @@ class PlayerComparison:
         self.output_file = output_file
         self.first_date = first_date
         self.second_date = second_date
+        self.list_players = []
 
     def create_list_of_players(self):
 
@@ -29,10 +30,15 @@ class PlayerComparison:
 
             list_players.append(player)
 
-        return list_players
+        self.list_players = list_players
 
-    def tabulate_players(self):
-        list = self.create_list_of_players()
+    def tabulate_players(self, generate_players):
+
+        if generate_players:
+            self.create_list_of_players()
+        else:
+            print("player created")
+            list = self.list_players
 
         print("")
 

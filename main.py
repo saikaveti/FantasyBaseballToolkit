@@ -16,7 +16,7 @@ main_stats = StatsRange(first_name, last_name, stats_file)
 ###ain_stats.driver()
 
 compare_stats = PlayerComparison(["j.d.", "rafael"], ["martinez", "devers"], 14, stats_file, "", "")
-###compare_stats.tabulate_players()
+##compare_stats.tabulate_players(True)
 
-similarPlayers = SimilarPlayerSearch("jed", "lowrie", 14, stats_file)
-similarPlayers.find_similar_players()
+similarPlayers = SimilarPlayerSearch("mike", "trout", 14, stats_file)
+similarPlayers.find_similar_players(7)
