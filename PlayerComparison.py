@@ -4,6 +4,8 @@ from Player import *
 from StatsRange import *
 from DateManipulation import *
 
+import sys
+
 class PlayerComparison:
     def __init__(self, first_name_list, last_name_list, period_days, output_file, first_date, second_date):
         self.list_first_name = first_name_list
@@ -32,13 +34,16 @@ class PlayerComparison:
 
         self.list_players = list_players
 
+
+
     def tabulate_players(self, generate_players):
+
+        list = []
 
         if generate_players:
             self.create_list_of_players()
-        else:
-            print("player created")
-            list = self.list_players
+
+        list = self.list_players
 
         print("")
 

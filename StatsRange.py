@@ -3,11 +3,14 @@ from pybaseball import batting_stats_range
 from Player import *
 from DateManipulation import *
 
+import sys
 import re
+
 
 class StatsRange:
 
     def __init__(self, first_name, last_name, output_file):
+
         self.first_name = first_name
         self.last_name = last_name
         #self.playerid_array = playerid_lookup(last_name, first_name)

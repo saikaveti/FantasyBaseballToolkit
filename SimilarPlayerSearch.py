@@ -5,6 +5,9 @@ from StatsRange import *
 from DateManipulation import *
 from PlayerComparison import *
 
+import sys
+
+
 class SimilarPlayerSearch:
 
     def __init__(self, first_name, last_name, num_days, output_file):
