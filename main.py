@@ -6,7 +6,7 @@ import sys
 
 stats_file = "stats_file.txt"
 
-type_analysis = "similar"
+type_analysis = "comparison"
 
 first_name = "paul"
 last_name = "goldschmidt"
