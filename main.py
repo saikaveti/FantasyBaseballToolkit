@@ -1,12 +1,15 @@
 from StatsRange import *
 from PlayerComparison import *
 from SimilarPlayerSearch import *
+from AdvancedPlayer import *
+from AdvancedPlayerRanker import *
+
 import sys
 
 
 stats_file = "stats_file.txt"
 
-type_analysis = "comparison"
+type_analysis = "ranked"
 
 first_name = "paul"
 last_name = "goldschmidt"
@@ -27,3 +30,7 @@ if type_analysis == "comparison":
 if type_analysis == "similar":
     similarPlayers = SimilarPlayerSearch(first_name, last_name, 14, stats_file)
     similarPlayers.find_similar_players(7)
+
+if type_analysis == "ranked":
+    rankedPlayers = AdvancedPlayerRanker(40, stats_file)
+    rankedPlayers.generate_players()
