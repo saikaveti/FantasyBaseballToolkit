@@ -31,5 +31,5 @@ if type_analysis == "similar":
     similarPlayers.find_similar_players(7)
 
 if type_analysis == "ranked":
-    rankedPlayers = AdvancedPlayerRanker(40, stats_file)
+    rankedPlayers = AdvancedPlayerRanker(200, stats_file)
     rankedPlayers.get_ranked_players(1, 25);

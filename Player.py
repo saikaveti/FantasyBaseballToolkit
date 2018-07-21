@@ -54,7 +54,7 @@ class AdvancedPlayer:
         self.TA = float(self.TB + BB + HBP + SB - CS) / float(AB - H + CS + GIDP)
         self.ISO = SLG - BA
         self.SECA = float(self.TB - H + BB + SB - CS) / float(AB)
-        self.RC27 = self.RC / (float(AB - H + SH + SF + CS + GIDP) / 27)
+        self.RC27 = self.RC / (float(AB - H + SH + SF + CS + GIDP) / 27.0)
 
     def print_player(self):
         print("First Name: {}, Last Name: {}, AB: {!s}, H: {!s}, 2B: {!s}, 3B: {!s}, HR: {!s}, BB: {!s}, HBP: {!s}, IBB: {!s}, SB: {!s}, CS: {!s}, GIDP: {!s}, SH: {!s}, SF: {!s}, BA: {!s}, OBP: {!s}, SLG: {!s}, OPS: {!s}, TB: {!s}, RC: {!s}, TA: {!s}, ISO: {!s}, SECA: {!s}, RC27: {!s}".format(self.first_name, self.last_name, self.AB, self.H, self.DOUBLE, self.TRIPLE, self.HR, self.BB, self.HBP, self.IBB, self.SB, self.CS, self.GIDP, self.SH, self.SF, self.BA, self.OBP, self.SLG, self.OPS, self.TB, self.RC, self.TA, self.ISO, self.SECA, self.RC27))
@@ -67,4 +67,4 @@ class OPGPlayer:
         self.OPG_score = OPG_score
 
     def print_player(self):
-        print("First Name: " + self.first_name + ", Last Name: " + self.last_name + ", OPG: " + self.OPG_score)
+        print("First Name: " + self.first_name + ", Last Name: " + self.last_name + ", OPG: " + str(self.OPG_score))
