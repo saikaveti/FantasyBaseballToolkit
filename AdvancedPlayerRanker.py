@@ -52,6 +52,10 @@ class AdvancedPlayerRanker:
         first_name = ""
         last_name = ""
 
+        #Additional Variables
+        R = 0
+        RBI = 0
+        SO = 0
         #Taken Variables
         AB = 0
         H = 0
@@ -102,6 +106,15 @@ class AdvancedPlayerRanker:
             elif line.startswith("BB"):
                 elements = line.split()
                 BB = int(elements[1])
+            elif line.startswith("R") and not line.startswith("RBI"):
+                elements = line.split()
+                R = int(elements[1])
+            elif line.startswith("SO"):
+                elements = line.split()
+                SO = int(elements[1])
+            elif line.startswith("RBI"):
+                elements = line.split()
+                RBI = int(elements[1])
             elif line.startswith("HBP"):
                 elements = line.split()
                 HBP = int(elements[1])
@@ -142,7 +155,7 @@ class AdvancedPlayerRanker:
                 elements = line.split()
                 OPS = float(elements[1])
             elif line.startswith("Name:"):
-                player = AdvancedPlayer(first_name, last_name, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF)
+                player = AdvancedPlayer(first_name, last_name, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF, R, RBI, SO)
                 list_players.append(player)
 
         for player in list_players:
@@ -192,5 +205,20 @@ class AdvancedPlayerRanker:
 
         partial_list = sort_list[start_rank - 1:end_rank]
 
+        first_name_list = list()
+        last_name_list = list()
+
+        tabulate_players = list()
+
         for player in partial_list:
-            player.print_player()
+            first_name_list.append(player.first_name)
+            last_name_list.append(player.last_name)
+
+        for player in partial_list:
+            for main_player in list_players:
+                if player.first_name == main_player.first_name and player.last_name == main_player.last_name:
+                    tabulate_players.append(main_player)
+
+        comparison = PlayerComparison(first_name_list, last_name_list, self.num_days, self.output_file, "", "")
+        comparison.list_players = tabulate_players
+        comparison.tabulate_players(False)

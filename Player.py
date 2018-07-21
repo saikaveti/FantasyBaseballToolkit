@@ -25,9 +25,13 @@ class Player:
 
 class AdvancedPlayer:
 
-    def __init__(self, first_name, last_name, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF):
+    def __init__(self, first_name, last_name, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF, R, RBI, SO):
         self.first_name = first_name
         self.last_name = last_name
+        #Extra Variables
+        self.R = R
+        self.RBI = RBI
+        self.SO = SO
         #Taken Variables
         self.AB = AB
         self.H = H
