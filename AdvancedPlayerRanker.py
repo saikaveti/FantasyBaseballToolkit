@@ -4,7 +4,8 @@ from Player import *
 from StatsRange import *
 from DateManipulation import *
 from PlayerComparison import *
-from AdvancedPlayer import *
+
+import numpy as np
 
 import sys
 
@@ -143,5 +144,42 @@ class AdvancedPlayerRanker:
             if (player.AB != -1000000):
                 pruned_list_players.append(player)
 
-        for player in pruned_list_players:
-            player.print_player()
+        return pruned_list_players
+
+    def get_player_array(self, list_players):
+        BA_values = np.array([])
+        OBP_values = np.array([])
+        SLG_values = np.array([])
+        OPS_values = np.array([])
+        TA_values = np.array([])
+        ISO_values = np.array([])
+        SECA_values = np.array([])
+        RC27_values = np.array([])
+
+        for player in list_players:
+            np.append(BA_values, player.BA)
+            np.append(OBP_values, player.OBP)
+            np.append(SLG_values, player.SLG)
+            np.append(OPS_values, player.OPS)
+            np.append(TA_values, player.TA)
+            np.append(ISO_values, player.ISO)
+            np.append(SECA_values, player.SECA)
+            np.append(RC27_values, player.RC27)
+
+        BA_mean = np.mean(BA_values)
+        OBP_mean = np.mean(OBP_values)
+        SLG_mean = np.mean(SLG_values)
+        OPS_mean = np.mean(OPS_values)
+        TA_mean = np.mean(TA_valyes)
+        ISO_mean = np.mean(ISO_values)
+        SECA_mean = np.mean(SECA_values)
+        RC27_mean = np.mean(RC27_values)
+
+        BA_mean = np.std(BA_values)
+        OBP_mean = np.std(OBP_values)
+        SLG_mean = np.std(SLG_values)
+        OPS_mean = np.std(OPS_values)
+        TA_mean = np.std(TA_valyes)
+        ISO_mean = np.std(ISO_values)
+        SECA_mean = np.std(SECA_values)
+        RC27_mean = np.std(RC27_values)

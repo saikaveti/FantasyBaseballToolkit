@@ -1,7 +1,6 @@
 from StatsRange import *
 from PlayerComparison import *
 from SimilarPlayerSearch import *
-from AdvancedPlayer import *
 from AdvancedPlayerRanker import *
 
 import sys
