@@ -4,6 +4,9 @@ from Player import *
 from StatsRange import *
 from DateManipulation import *
 from PlayerComparison import *
+from WriteData import *
+
+from sklearn.decomposition import PCA
 
 import numpy as np
 
@@ -19,7 +22,7 @@ class AdvancedPlayerRanker:
         date_obj = DateManipulation()
 
         prev_date = date_obj.get_date_for_num_days(self.num_days)
-        last_date = date_obj.get_date_for_num_days(6)
+        last_date = date_obj.get_previous_date()
 
         #print(prev_date)
 
@@ -146,7 +149,10 @@ class AdvancedPlayerRanker:
 
         return pruned_list_players
 
-    def get_player_array(self, list_players):
+    def get_opg_player_list(self, list_players):
+        write_data = WriteData(list_players, "raw_data.csv")
+        write_data.write_player_data()
+
         BA_values = np.array([])
         OBP_values = np.array([])
         SLG_values = np.array([])
@@ -157,29 +163,33 @@ class AdvancedPlayerRanker:
         RC27_values = np.array([])
 
         for player in list_players:
-            np.append(BA_values, player.BA)
-            np.append(OBP_values, player.OBP)
-            np.append(SLG_values, player.SLG)
-            np.append(OPS_values, player.OPS)
-            np.append(TA_values, player.TA)
-            np.append(ISO_values, player.ISO)
-            np.append(SECA_values, player.SECA)
-            np.append(RC27_values, player.RC27)
+            BA_values = np.append(BA_values, player.BA)
+            OBP_values = np.append(OBP_values, player.OBP)
+            SLG_values = np.append(SLG_values, player.SLG)
+            OPS_values = np.append(OPS_values, player.OPS)
+            TA_values = np.append(TA_values, player.TA)
+            ISO_values = np.append(ISO_values, player.ISO)
+            SECA_values = np.append(SECA_values, player.SECA)
+            RC27_values = np.append(RC27_values, player.RC27)
 
         BA_mean = np.mean(BA_values)
         OBP_mean = np.mean(OBP_values)
         SLG_mean = np.mean(SLG_values)
         OPS_mean = np.mean(OPS_values)
-        TA_mean = np.mean(TA_valyes)
+        TA_mean = np.mean(TA_values)
         ISO_mean = np.mean(ISO_values)
         SECA_mean = np.mean(SECA_values)
         RC27_mean = np.mean(RC27_values)
 
-        BA_mean = np.std(BA_values)
-        OBP_mean = np.std(OBP_values)
-        SLG_mean = np.std(SLG_values)
-        OPS_mean = np.std(OPS_values)
-        TA_mean = np.std(TA_valyes)
-        ISO_mean = np.std(ISO_values)
-        SECA_mean = np.std(SECA_values)
-        RC27_mean = np.std(RC27_values)
+        BA_std = np.std(BA_values)
+        OBP_std = np.std(OBP_values)
+        SLG_std = np.std(SLG_values)
+        OPS_std = np.std(OPS_values)
+        TA_std = np.std(TA_values)
+        ISO_std = np.std(ISO_values)
+        SECA_std = np.std(SECA_values)
+        RC27_std = np.std(RC27_values)
+
+    def get_ranked_players(self, start_rank, end_rank):
+        list_players = self.generate_players()
+        self.get_opg_player_list(list_players)
