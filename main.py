@@ -27,9 +27,9 @@ if type_analysis == "comparison":
     compare_stats.tabulate_players(True)
 
 if type_analysis == "similar":
-    similarPlayers = SimilarPlayerSearch(first_name, last_name, 14, stats_file)
-    similarPlayers.find_similar_players(7)
+    similarPlayers = SimilarPlayerSearch(first_name, last_name, 30, stats_file)
+    similarPlayers.find_similar_players(9)
 
 if type_analysis == "ranked":
     rankedPlayers = AdvancedPlayerRanker(200, stats_file)
-    rankedPlayers.get_ranked_players(1, 50);
+    rankedPlayers.get_ranked_players(1, 25);
