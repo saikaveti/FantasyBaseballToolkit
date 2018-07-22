@@ -5,6 +5,7 @@ This project aims to create a library of tools relating to Fantasy Baseball. The
 ### Current Features
 
 ##### Find a single player's data for yesterday, last 7 days, last month, and year to date.
+Example:
 ```
 FINDING YESTERDAY'S DATA:
 First Name    Last Name      AB    R    H    HR    RBI    SO    SB    BA    OBP    SLG    OPS
@@ -27,6 +28,7 @@ First Name    Last Name      AB    R    H    HR    RBI    SO    SB     BA    OBP
 Paul          Goldschmidt   360   61  100    21     52   113     3  0.278  0.384  0.528  0.912
 ```
 ##### A tool to easily compare various players across different statistical categories
+Example:
 ```
 STATISTICS FOR LAST 14 DAYS
 First Name    Last Name      AB    R    H    HR    RBI    SO    SB     BA    OBP    SLG    OPS
@@ -35,6 +37,7 @@ J.D.          Martinez       29    8    8     2      6     9     0  0.276  0.382
 Paul          Goldschmidt    35    2   10     1      1    12     1  0.286  0.375  0.4    0.775
 ```
 ##### A way to find players that are performing similarly to another player over a certain day range.
+Example:
 ```
 Finding players similar to PAUL GOLDSCHMIDT over the past 30 days.
 
@@ -46,7 +49,14 @@ Asdrubal      Cabrera        83   12   24     5     12    19     0  0.289  0.372
 Derek         Dietrich       85   20   26     5     11    25     1  0.306  0.406  0.529  0.935
 Juan          Soto           87   15   24     4     14    21     1  0.276  0.4    0.46   0.86
 ```
+Additional Information:
+The list can be tuned with a parameter that specifies how many categories have to be similar.
+```
+#Finds players with similar stats in 9 different categories
+similarPlayers.find_similar_players(9)
+```
 ##### A ranked list of players based on a single statistical category (OPG)
+Example:
 ```
 STATISTICS FOR LAST 200 DAYS
 First Name    Last Name      AB    R    H    HR    RBI    SO    SB     BA    OBP    SLG    OPS
