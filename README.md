@@ -94,4 +94,4 @@ Source: http://vixra.org/pdf/1205.0104v1.pdf
 
 ### Under/Over-Valued Players
 
-##### Undervalued players
+##### Undervalued Players
