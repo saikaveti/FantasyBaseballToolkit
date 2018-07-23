@@ -2,7 +2,7 @@
 
 This project aims to create a library of tools relating to Fantasy Baseball. The features listed below will be added as more features are added.
 
-### Current Features
+### Player Statistic Retrieval
 
 ##### Find a single player's data for yesterday, last 7 days, last month, and year to date.
 Example:
@@ -27,6 +27,8 @@ First Name    Last Name      AB    R    H    HR    RBI    SO    SB     BA    OBP
 ------------  -----------  ----  ---  ---  ----  -----  ----  ----  -----  -----  -----  -----
 Paul          Goldschmidt   360   61  100    21     52   113     3  0.278  0.384  0.528  0.912
 ```
+### Player Comparison
+
 ##### A tool to easily compare various players across different statistical categories
 Example:
 ```
@@ -89,3 +91,7 @@ Brandon       Belt          300   44   86    14     43    70     2  0.287  0.383
 ```
 
 Source: http://vixra.org/pdf/1205.0104v1.pdf 
+
+### Player Projections (Start of Season vs. Current Performance)
+
+##### Projections (Current Performance, Rest of Season, Current + Rest, Start of Season)
