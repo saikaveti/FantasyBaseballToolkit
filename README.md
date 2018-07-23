@@ -87,3 +87,5 @@ Gleyber       Torres        218   30   64    15     42    61     2  0.294  0.35 
 Scooter       Gennett       358   60  115    16     63    76     2  0.321  0.372  0.514  0.885
 Brandon       Belt          300   44   86    14     43    70     2  0.287  0.383  0.487  0.87
 ```
+
+Source: http://vixra.org/pdf/1205.0104v1.pdf 
