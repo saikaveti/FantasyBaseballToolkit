@@ -92,6 +92,6 @@ Brandon       Belt          300   44   86    14     43    70     2  0.287  0.383
 
 Source: http://vixra.org/pdf/1205.0104v1.pdf 
 
-### Player Projections (Start of Season vs. Current Performance)
+### Player Projections
 
 ##### Projections (Current Performance, Rest of Season, Current + Rest, Start of Season)
