@@ -2,13 +2,14 @@ from StatsRange import *
 from PlayerComparison import *
 from SimilarPlayerSearch import *
 from AdvancedPlayerRanker import *
+from UnderOverPlayers import *
 
 import sys
 
 
 stats_file = "stats_file.txt"
 
-type_analysis = "ranked"
+type_analysis = "underrated"
 
 first_name = "paul"
 last_name = "goldschmidt"
@@ -33,3 +34,7 @@ if type_analysis == "similar":
 if type_analysis == "ranked":
     rankedPlayers = AdvancedPlayerRanker(200, stats_file)
     rankedPlayers.get_ranked_players(1, 25);
+
+if type_analysis == "underrated":
+    underrated = UnderValuedPlayers(200, stats_file)
+    underrated.tabulate_under_players()
