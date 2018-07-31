@@ -92,7 +92,7 @@ Brandon       Belt          300   44   86    14     43    70     2  0.287  0.383
 
 Source: http://vixra.org/pdf/1205.0104v1.pdf 
 
-### Under/Over-Valued Players
+### Under-Valued Players
 
 ##### Undervalued Players
 This list is found using two separate methods that each generate two different lists of undervalued players that are appended together to find a complete list of undervalued players.
