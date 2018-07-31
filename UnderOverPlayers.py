@@ -9,7 +9,6 @@ from AdvancedPlayerRanker import *
 
 import numpy as np
 import pandas as pd
-import matplotlib.pylot as plt
 from matplotlib import style
 from sklearn.cluster import KMeans
 
@@ -39,17 +38,27 @@ class UnderValuedPlayers:
 
     def prune_on_clustering(self, list_players):
         write_data = WriteData(list_players, "raw_data.csv")
-        write_data.write_player_data()
+        write_data.write_extended_player_data()
 
-        df = pd.read_csv("raw_data.csv")
+        obj = pd.read_csv("raw_data.csv")
 
-        cluster_map = pd.DataFrame()
+        print(obj)
+
+
+        X = obj.ix[2, 5]
+
+        kmeans=KMeans(n_clusters=5, init='k-means++', max_iter= 300, n_init= 10, random_state= 0)
+        kmeans.fit(X)
+
+        #df.drop(['OBP', 'SLG', 'TA', 'SECA'])
+
 
 
     def tabulate_under_players(self):
         total_players = self.get_players()
         babip_players = self.prune_on_BABIP(total_players)
 
+        self.prune_on_clustering(total_players)
 
         final_list = babip_players
 
