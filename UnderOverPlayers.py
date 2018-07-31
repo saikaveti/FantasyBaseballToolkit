@@ -31,6 +31,12 @@ class UnderValuedPlayers:
 
         return babip_pruned
 
+    def prune_on_clustering(self, list_players):
+        write_data = WriteData(list_players, "raw_data.csv")
+        write_data.write_player_data()
+
+        df = pd.read_csv("raw_data.csv")
+
     def tabulate_under_players(self):
         total_players = self.get_players()
         babip_players = self.prune_on_BABIP(total_players)
