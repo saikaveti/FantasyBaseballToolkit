@@ -20,7 +20,7 @@ class WriteData:
 	def write_extended_player_data(self):
 		file = open(self.output_file, 'w')
 
-		header = ("FIRST_NAME, LAST_NAME, BA,OBP,SLG,OPS,TA,ISO,SECA,RC27")
+		header = ("FIRST_NAME,LAST_NAME,BA,OBP,SLG,OPS,TA,ISO,SECA,RC27")
 		file.write(header)
 		file.write("\n")
 
