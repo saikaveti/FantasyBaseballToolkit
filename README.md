@@ -97,6 +97,8 @@ Source: http://vixra.org/pdf/1205.0104v1.pdf
 ##### Undervalued Players
 This list is found using two separate methods that each generate two different lists of undervalued players that are appended together to find a complete list of undervalued players.
 
+Method 2 inspired by similar method for pitchers
+
 ###### Method 1
 Found list of players that had a BABIP of less than .250, while still having an average of .230 or above. The low BABIP indicates that the player is simply just "unlucky" over the course of the span, while the AVG restriction maintains that the player should still be able to generate some form of reliable contact.
 
@@ -125,4 +127,4 @@ Teoscar       Hernandez     333   46   81    16     41    98     3  0.243  0.3  
 Chris         Taylor        389   62  101    12     50   123     4  0.26   0.334  0.458  0.792
 Nick          Williams      276   32   72    14     39    73     2  0.261  0.333  0.457  0.79
 ```
-
+Source: http://www.users.miamioh.edu/stephamd/papers/Baseball_Machine_Learning.pdf
