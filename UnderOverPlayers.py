@@ -7,6 +7,12 @@ from PlayerComparison import *
 from WriteData import *
 from AdvancedPlayerRanker import *
 
+import numpy as np
+import pandas as pd
+import matplotlib.pylot as plt
+from matplotlib import style
+from sklearn.cluster import KMeans
+
 class UnderValuedPlayers:
     def __init__(self, num_days, output_file):
         self.num_days = num_days
@@ -36,6 +42,9 @@ class UnderValuedPlayers:
         write_data.write_player_data()
 
         df = pd.read_csv("raw_data.csv")
+
+        cluster_map = pd.DataFrame()
+
 
     def tabulate_under_players(self):
         total_players = self.get_players()
