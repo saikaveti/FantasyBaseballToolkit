@@ -12,10 +12,11 @@ import pandas as pd
 from matplotlib import style
 from sklearn.cluster import KMeans
 
-class UnderValuedPlayers:
-    def __init__(self, num_days, output_file):
+class ValuedPlayers:
+    def __init__(self, num_days, output_file, under):
         self.num_days = num_days
         self.output_file = output_file
+        self.under_boolean = under
 
     def get_players(self):
         ranked = AdvancedPlayerRanker(self.num_days, self.output_file)
@@ -31,8 +32,13 @@ class UnderValuedPlayers:
 
             babip = numerator/denominator
 
-            if (babip < .250 and player.BA > .230):
-                babip_pruned.append(player)
+            if self.under_boolean:
+                if (babip < .250 and player.BA > .230):
+                    babip_pruned.append(player)
+
+            if not self.under_boolean:
+                if (babip > .350):
+                    babip_pruned.append(player)
 
         return babip_pruned
 
@@ -56,6 +62,7 @@ class UnderValuedPlayers:
         cluster_map['cluster'] = clf.labels_
 
         complete_underrated = list()
+        complete_overrated = list()
 
 
         for i in range(num):
@@ -88,13 +95,18 @@ class UnderValuedPlayers:
 
             for player in list_cluster:
                 if player.RC27 < average_RC27:
+                    if self.under_boolean:
+                        if (average_RC27 - player.RC27) / average_RC27 > .1:
+                            complete_underrated.append(player)
 
-                    if (average_RC27 - player.RC27) / average_RC27 > .1:
-                        complete_underrated.append(player)
+                if player.RC27 > average_RC27:
+                    if not self.under_boolean:
+                        if (player.RC27 - average_RC27) / average_RC27 > .1:
+                            complete_overrated.append(player)
 
         return complete_underrated
 
-    def tabulate_under_players(self):
+    def tabulate_players(self):
         total_players = self.get_players()
 
         babip_players = self.prune_on_BABIP(total_players)

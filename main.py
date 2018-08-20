@@ -9,7 +9,7 @@ import sys
 
 stats_file = "stats_file.txt"
 
-type_analysis = "underrated"
+type_analysis = "overrated"
 
 first_name = "paul"
 last_name = "goldschmidt"
@@ -36,5 +36,9 @@ if type_analysis == "ranked":
     rankedPlayers.get_ranked_players(1, 25);
 
 if type_analysis == "underrated":
-    underrated = UnderValuedPlayers(200, stats_file)
-    underrated.tabulate_under_players()
+    underrated = ValuedPlayers(200, stats_file, True)
+    underrated.tabulate_players()
+
+if type_analysis == "overrated":
+    overrated = ValuedPlayers(200, stats_file, False)
+    overrated.tabulate_players()
