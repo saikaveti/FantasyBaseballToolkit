@@ -37,7 +37,8 @@ class ValuedPlayers:
                     babip_pruned.append(player)
 
             if not self.under_boolean:
-                if (babip > .350):
+                if (babip > .375):
+                    print(player.first_name + " " + player.last_name + " " + str(babip))
                     babip_pruned.append(player)
 
         return babip_pruned
@@ -102,9 +103,13 @@ class ValuedPlayers:
                 if player.RC27 > average_RC27:
                     if not self.under_boolean:
                         if (player.RC27 - average_RC27) / average_RC27 > .1:
+                            print(player.first_name + " " + player.last_name)
                             complete_overrated.append(player)
 
-        return complete_underrated
+        if self.under_boolean:
+            return complete_underrated
+        else:
+            return complete_overrated
 
     def tabulate_players(self):
         total_players = self.get_players()

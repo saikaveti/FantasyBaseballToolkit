@@ -9,7 +9,7 @@ import sys
 
 stats_file = "stats_file.txt"
 
-type_analysis = "overrated"
+type_analysis = "underrated"
 
 first_name = "paul"
 last_name = "goldschmidt"
