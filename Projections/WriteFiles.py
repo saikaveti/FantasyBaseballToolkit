@@ -7,7 +7,7 @@ class WriteData:
 		self.year = year
 
     def write_data_to_text(self, year):
-        file = open("", 'w')
+        file = open("stats_file.txt", 'w')
 
         data = batting_stats_range(prev_date, last_date)
 
