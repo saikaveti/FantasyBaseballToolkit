@@ -1,6 +1,8 @@
 from WriteFiles import *
 from ReadFile import *
 
+import pandas as pd
+
 writer = WriteData(2017, "stats_file.txt")
 reader = ReadFile("stats_file.txt")
 
