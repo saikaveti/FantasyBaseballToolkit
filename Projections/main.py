@@ -6,4 +6,4 @@ reader = ReadFile("stats_file.txt")
 
 writer.write_data_to_text(3)
 players = reader.generate_players()
-print(len(players))
+writer.write_clean_data_to_csv(players, "threeyears.csv")
