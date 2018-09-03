@@ -26,6 +26,7 @@ class WriteData:
         file = open(csv_file, 'w')
 
         file.write("FIRST,LAST,AB,H,2B,3B,HR,RBI,SO,BB,HBP,IBB,SB,CS,GIDP,SH,SF,BA,OBP,SLG,OPS,TB,RC,TA,ISO,SECA,RC27")
+        file.write("\n")
 
         for p in players:
             file.write(p.first_name + "," + p.last_name + "," + str(p.AB) + "," + str(p.H) + "," + str(p.DOUBLE) + "," + str(p.TRIPLE) + "," + str(p.HR) + "," + str(p.RBI) + "," + str(p.SO) + "," + str(p.BB) + "," + str(p.HBP) + "," + str(p.IBB) + "," + str(p.SB) + "," + str(p.CS) + "," + str(p.GIDP) + "," + str(p.SH) + "," + str(p.SF) + "," + str(p.BA) + "," + str(p.OBP) + "," + str(p.SLG) + "," + str(p.OPS) + "," + str(p.TB) + "," + str(p.RC) + "," + str(p.TA) + "," + str(p.ISO) + "," + str(p.SECA) + "," + str(p.RC27))
