@@ -167,3 +167,11 @@ Jose          Ramirez       442   85  133    37     91    57    27  0.301  0.412
 Mike          Trout         372   82  115    30     60    97    21  0.309  0.459  0.624  1.083
 ```
 Source: http://www.users.miamioh.edu/stephamd/papers/Baseball_Machine_Learning.pdf
+
+### Projections
+
+##### Algorithm
+
+##### Comparing to Previous Years
+
+##### Acessing Projections
