@@ -23,5 +23,5 @@ writer.write_data_to_text(0)
 players0 = reader.generate_players()
 writer.write_clean_data_to_csv(players0, "currentyear.csv")
 
-handler = ProjectionHandler("currentyear.csv", "oneyear.csv", "twoyears.csv", "threeyears.csv")
-handler.create_map()
+handler = ProjectionHandler("currentyear.csv", players0, "oneyear.csv", players1, "twoyears.csv", players2, "threeyears.csv", players3)
+handler.create_dicts()
