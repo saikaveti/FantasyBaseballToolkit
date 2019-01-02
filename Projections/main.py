@@ -24,3 +24,4 @@ players0 = reader.generate_players()
 writer.write_clean_data_to_csv(players0, "currentyear.csv")
 
 handler = ProjectionHandler("currentyear.csv", "oneyear.csv", "twoyears.csv", "threeyears.csv")
+handler.create_map()
