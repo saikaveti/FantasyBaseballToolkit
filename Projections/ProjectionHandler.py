@@ -26,8 +26,5 @@ class ProjectionHandler:
 
     def create_dicts(self):
         self.oneyearDict = self.get_map(self.oneyearList);
-        print(len(self.oneyearDict))
         self.twoyearsDict = self.get_map(self.twoyearList);
-        print(len(self.twoyearsDict))
         self.threeyearsDict = self.get_map(self.threeyearList);
-        print(len(self.threeyearsDict))
