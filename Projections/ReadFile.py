@@ -14,6 +14,8 @@ class ReadFile:
         first_name = ""
         last_name = ""
 
+        Age = ""
+
         #Additional Variables
         R = 0
         RBI = 0
@@ -48,6 +50,9 @@ class ReadFile:
                 elements = line.split()
                 first_name = elements[1]
                 last_name = elements[2]
+            elif line.startswith("Age"):
+                elements = line.split();
+                Age = elements[1];
             elif line.startswith("AB"):
                 elements = line.split()
                 AB = int(elements[1])
@@ -117,7 +122,7 @@ class ReadFile:
                 elements = line.split()
                 OPS = float(elements[1])
             elif line.startswith("Name:"):
-                player = AdvancedPlayer(first_name, last_name, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF, R, RBI, SO)
+                player = AdvancedPlayer(first_name, last_name, Age, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF, R, RBI, SO)
                 if player.AB != 1000000:
                     list_players.append(player)
 
