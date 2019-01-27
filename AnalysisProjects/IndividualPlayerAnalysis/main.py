@@ -2,6 +2,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
+#The template for each of the scatter plots is the sameself.
+#I plot the scatter plots, and set the axis labels and titlesself.
+#After that, I just save the scatter plot to a file
+
 df = pd.read_csv("data.csv");
 
 fig, ax = plt.subplots();
@@ -29,8 +33,6 @@ ax.set_title("H vs. AVG.")
 
 ax.set_xlim([0, None])
 ax.set_ylim([0, None])
-
-#ax.set_xlim([5, None])
 
 plt.savefig('HvsAVG.png')
 
