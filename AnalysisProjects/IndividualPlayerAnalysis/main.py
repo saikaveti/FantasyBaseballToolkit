@@ -4,7 +4,22 @@ import matplotlib.pyplot as plt
 
 df = pd.read_csv("data.csv");
 
-plt.plot(df['HR'],df['OPS'])
-plt.save('HRvsOPS.png')
+fig, ax = plt.subplots();
 
-print(df);
+HRvsOPSScatter = ax.scatter(df['HR'], df['OPS'])
+
+ax.set_xlabel("HRs in 2018")
+ax.set_ylabel("OPS in 2018")
+ax.set_title("HR vs. OPS")
+
+plt.savefig('HRvsOPS.png')
+
+ax.clear()
+
+HRvsAVGScatter = ax.scatter(df['HR'], df['BA'])
+
+ax.set_xlabel("HRs in 2018")
+ax.set_ylabel("AVG. in 2018")
+ax.set_title("HR vs. AVG.")
+
+plt.savefig('HRvsAVG.png')
