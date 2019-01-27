@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 #The template for each of the scatter plots is the sameself.
 #I plot the scatter plots, and set the axis labels and titlesself.
 #After that, I just save the scatter plot to a file
+#For this project, I used 2018 statistics
 
 df = pd.read_csv("data.csv");
 
