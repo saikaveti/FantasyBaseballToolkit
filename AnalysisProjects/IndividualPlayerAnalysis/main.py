@@ -6,20 +6,30 @@ df = pd.read_csv("data.csv");
 
 fig, ax = plt.subplots();
 
-HRvsOPSScatter = ax.scatter(df['HR'], df['OPS'])
+#HR vs. SLG scatter plot
+HRvsSLGScatter = ax.scatter(df['HR'], df['SLG'])
 
 ax.set_xlabel("HRs in 2018")
-ax.set_ylabel("OPS in 2018")
-ax.set_title("HR vs. OPS")
+ax.set_ylabel("SLG in 2018")
+ax.set_title("HR vs. SLG")
 
-plt.savefig('HRvsOPS.png')
+ax.set_xlim([0, None])
+ax.set_ylim([0, None])
+
+plt.savefig('HRvsSLG.png')
 
 ax.clear()
 
-HRvsAVGScatter = ax.scatter(df['HR'], df['BA'])
+#H vs. AVG scatter plot
+HRvsAVGScatter = ax.scatter(df['H'], df['BA'])
 
-ax.set_xlabel("HRs in 2018")
+ax.set_xlabel("H in 2018")
 ax.set_ylabel("AVG. in 2018")
-ax.set_title("HR vs. AVG.")
+ax.set_title("H vs. AVG.")
 
-plt.savefig('HRvsAVG.png')
+ax.set_xlim([0, None])
+ax.set_ylim([0, None])
+
+#ax.set_xlim([5, None])
+
+plt.savefig('HvsAVG.png')
