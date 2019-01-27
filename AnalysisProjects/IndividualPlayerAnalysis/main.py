@@ -33,3 +33,33 @@ ax.set_ylim([0, None])
 #ax.set_xlim([5, None])
 
 plt.savefig('HvsAVG.png')
+
+ax.clear()
+
+#Average OPS Per Age
+meanOPS = df.groupby('Age')['OPS'].mean()
+meanOPS = meanOPS.reset_index()
+
+AgevsAverageOPS = ax.scatter(meanOPS['Age'], meanOPS['OPS'])
+
+ax.set_xlabel("Age")
+ax.set_ylabel("Average OPS")
+ax.set_title("Age vs. Average OPS")
+
+plt.savefig('AgevsAverageOPS')
+
+ax.clear()
+
+#Average OPS Per Age
+meanSO = df.groupby('Age')['SO'].mean()
+meanSO = meanSO.reset_index()
+
+AgevsAverageSO = ax.scatter(meanSO['Age'], meanSO['SO'])
+
+ax.set_xlabel("Age")
+ax.set_ylabel("Average SO")
+ax.set_title("Age vs. Average SO")
+
+plt.savefig('AgevsAverageSO')
+
+ax.clear()
