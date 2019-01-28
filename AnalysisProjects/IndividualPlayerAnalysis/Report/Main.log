@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  27 JAN 2019 17:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  28 JAN 2019 18:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1237,28 +1237,28 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 15.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Try loading font information for T1+LinuxBiolinumT-TLF on i
-nput line 15.
+nput line 13.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/T1LinuxBiolinumT-TLF.fd
 File: T1LinuxBiolinumT-TLF.fd 2017/03/20 (autoinst) Font definitions for T1/Lin
 uxBiolinumT-TLF.
 )
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 15.
+(Font)              scaled to size 12.0pt on input line 13.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxBiolinumT-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 12.0pt on input line 15.
+(Font)              scaled to size 12.0pt on input line 13.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 15.
+(Font)              scaled to size 10.95pt on input line 13.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 10.95pt on input line 15.
+(Font)              scaled to size 10.95pt on input line 13.
 LaTeX Font Info:    Try loading font information for TS1+LinuxLibertineT-TLF on
- input line 15.
+ input line 13.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/libertine/TS1LinuxLibertineT-TLF.
 fd
@@ -1266,25 +1266,25 @@ File: TS1LinuxLibertineT-TLF.fd 2017/03/20 (autoinst) Font definitions for TS1/
 LinuxLibertineT-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 7.0pt on input line 15.
+(Font)              scaled to size 7.0pt on input line 13.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 15.
+(Font)              scaled to size 8.0pt on input line 13.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/b/n' will be
-(Font)              scaled to size 8.0pt on input line 15.
+(Font)              scaled to size 8.0pt on input line 13.
 LaTeX Font Info:    Font shape `T1/LinuxLibertineT-TLF/m/it' will be
-(Font)              scaled to size 8.0pt on input line 15.
+(Font)              scaled to size 8.0pt on input line 13.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 8.0pt on input line 15.
+(Font)              scaled to size 8.0pt on input line 13.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `LinuxLibertineT-TLF' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 6.2pt on input line 15.
+(Font)              scaled to size 6.2pt on input line 13.
  (/usr/local/texlive/2018/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
@@ -1293,34 +1293,34 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
 Package hyperref Warning: Option `pdflang' has already been used,
-(hyperref)                setting the option has no effect on input line 15.
+(hyperref)                setting the option has no effect on input line 13.
 
 
 Package hyperref Warning: Option `pdfdisplaydoctitle' has already been used,
-(hyperref)                setting the option has no effect on input line 15.
+(hyperref)                setting the option has no effect on input line 13.
 
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 17.
+(Font)              scaled to size 9.0pt on input line 15.
 LaTeX Font Info:    Font shape `T1/LinuxBiolinumT-TLF/b/n' will be
-(Font)              scaled to size 9.0pt on input line 17.
+(Font)              scaled to size 9.0pt on input line 15.
 <HvsAVG.png, id=13, 578.16pt x 433.62pt>
 File: HvsAVG.png Graphic file (type png)
 <use HvsAVG.png>
-Package pdftex.def Info: HvsAVG.png  used on input line 24.
+Package pdftex.def Info: HvsAVG.png  used on input line 22.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 LaTeX Font Info:    Font shape `OT1/LinuxLibertineT-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 28.
+(Font)              scaled to size 9.0pt on input line 26.
 [1.1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./H
 vsAVG.png>]
 <HRvsSLG.png, id=28, 578.16pt x 433.62pt>
 File: HRvsSLG.png Graphic file (type png)
 <use HRvsSLG.png>
-Package pdftex.def Info: HRvsSLG.png  used on input line 35.
+Package pdftex.def Info: HRvsSLG.png  used on input line 33.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 <AgevsAverageOPS.png, id=29, 578.16pt x 433.62pt>
 File: AgevsAverageOPS.png Graphic file (type png)
 <use AgevsAverageOPS.png>
-Package pdftex.def Info: AgevsAverageOPS.png  used on input line 46.
+Package pdftex.def Info: AgevsAverageOPS.png  used on input line 44.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1329,7 +1329,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <AgevsAverageSO.png, id=40, 578.16pt x 433.62pt>
 File: AgevsAverageSO.png Graphic file (type png)
 <use AgevsAverageSO.png>
-Package pdftex.def Info: AgevsAverageSO.png  used on input line 58.
+Package pdftex.def Info: AgevsAverageSO.png  used on input line 56.
 (pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1365,11 +1365,11 @@ Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: F55CD7AEECCE5B4C916B88BB5EE6B632;95.
  ) 
 Here is how much of TeX's memory you used:
- 17784 strings out of 492649
- 267132 string characters out of 6129622
+ 17778 strings out of 492649
+ 266985 string characters out of 6129622
  383464 words of memory out of 5000000
  21033 multiletter control sequences out of 15000+600000
- 105066 words of font info for 173 fonts, out of 8000000 for 9000
+ 104520 words of font info for 169 fonts, out of 8000000 for 9000
  1302 hyphenation exceptions out of 8191
  60i,12n,94p,992b,402s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2018/texmf-dist/fonts/enc/dvips/libertine/lbtn_oexx6f.enc
@@ -1385,7 +1385,7 @@ ocal/texlive/2018/texmf-dist/fonts/type1/public/libertine/LinLibertineTB.pfb></
 usr/local/texlive/2018/texmf-dist/fonts/type1/public/txfonts/rtxr.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/newtx/txsys.pfb></usr/local/texli
 ve/2018/texmf-dist/fonts/type1/public/newtx/zxlri.pfb>
-Output written on Main.pdf (4 pages, 383805 bytes).
+Output written on Main.pdf (4 pages, 383834 bytes).
 PDF statistics:
  122 PDF objects out of 1000 (max. 8388607)
  88 compressed objects within 1 object stream
