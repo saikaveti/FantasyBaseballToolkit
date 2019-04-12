@@ -36,9 +36,9 @@ if type_analysis == "ranked":
     rankedPlayers.get_ranked_players(1, 25);
 
 if type_analysis == "underrated":
-    underrated = ValuedPlayers(200, stats_file, True)
+    underrated = ValuedPlayers(60, stats_file, True)
     underrated.tabulate_players()
 
 if type_analysis == "overrated":
-    overrated = ValuedPlayers(200, stats_file, False)
+    overrated = ValuedPlayers(60, stats_file, False)
     overrated.tabulate_players()

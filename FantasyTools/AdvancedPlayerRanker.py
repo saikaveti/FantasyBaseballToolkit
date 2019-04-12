@@ -156,11 +156,13 @@ class AdvancedPlayerRanker:
                 OPS = float(elements[1])
             elif line.startswith("Name:"):
                 player = AdvancedPlayer(first_name, last_name, AB, H, DOUBLE, TRIPLE, HR, BB, HBP, BA, OBP, SLG, OPS, IBB, SB, CS, GIDP, SH, SF, R, RBI, SO)
+                #print("player added")
                 list_players.append(player)
 
         for player in list_players:
             if (player.AB != -1000000):
                 pruned_list_players.append(player)
+
 
         return pruned_list_players
 
